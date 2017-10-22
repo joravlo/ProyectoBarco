@@ -1,0 +1,4 @@
+services:
+#    barco.example:
+#        class: BarcoBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

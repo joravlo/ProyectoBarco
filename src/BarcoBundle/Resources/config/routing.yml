@@ -1,0 +1,21 @@
+barco_homepage:
+    path:     /
+    defaults: { _controller: BarcoBundle:Default:index }
+barco_venta:
+    path:     /barcos
+    defaults: { _controller: BarcoBundle:Default:barcos }
+barco_detalle:
+    path:     /barcos/detalle
+    defaults: { _controller: BarcoBundle:Default:barcosDetalle }
+amarre_venta:
+    path:     /amarre
+    defaults: { _controller: BarcoBundle:Default:amarres }
+amarre_detalle:
+    path:     /amarre/detalle
+    defaults: { _controller: BarcoBundle:Default:amarresDetalle }
+accesorio_venta:
+    path:     /accesorio
+    defaults: { _controller: BarcoBundle:Default:accesorios }
+accesorio_detalle:
+    path:     /accesorio/detalle
+    defaults: { _controller: BarcoBundle:Default:accesoriosDetalle }

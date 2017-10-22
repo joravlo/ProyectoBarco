@@ -1,0 +1,140 @@
+{% extends 'base.html.twig' %}
+{% block title %}Inicio{% endblock %}
+{% block javascripts %} <script src= {{ asset('js/jquery.min.js') }}></script> {% endblock %}
+{% block body %}<script>
+ $(function () {
+   $("#slider").responsiveSlides({
+     auto: true,
+     speed: 500,
+     namespace: "callbacks",
+     pager: true,
+   });
+ });
+</script>
+<script src="js/responsiveslides.min.js"></script>
+ <div class="slider">
+   <div class="callbacks_container">
+     <ul class="rslides" id="slider">
+       <li>
+         <img src= {{ asset('images/b4.jpg') }} alt=""/>
+         <div class="caption">
+           <div class="logo">
+     <a href= "{{path('barco_homepage')}}"><img src= {{ asset('images/logo.png') }}></a>
+     </div>
+     <h2>PONEMOS EL MAR A TU ALCAN{{ asset('css/style.css') }}CE</h2>
+         </div>
+       </li>
+       <li>
+         <img src= {{ asset('images/b5.jpg') }} alt="">
+          <div class="caption">
+           <div class="logo">
+     <a href= "{{path('barco_homepage')}}"><img src= {{ asset('images/logo.png') }}></a>
+     </div>
+     <h2>PONEMOS EL MAR A TU ALCANCE</h2>
+         </div>
+       </li>
+       <li>
+         <img src= {{ asset('images/b3.jpg') }} alt="">
+         <div class="caption">
+           <div class="logo">
+     <a href= "{{path('barco_homepage')}}"><img src= {{ asset('images/logo.png') }}></a>
+     </div>
+     <h2>PONEMOS EL MAR A TU ALCANCE</h2>
+         </div>
+       </li>
+     </ul>
+ </div>
+</div>
+<!---->
+<div class="speed">
+<h2>BARCOS Y AMARRES</h2>
+<div class="speed-boats1">
+    <div class="col-md-4 boat-info">
+    <h3>BARCOS</h3>
+    <p>En nuestra tienda podras encontrar una gran variedad de barcos tanto si quieres disfrutarlos una sola vez como si quieres disfrutar de ellos toda la vida</p>
+    <a href="{{path('barco_venta')}}">Ver barcos</a>
+    <div class="arrow"></div>
+  </div>
+  <div class="col-md-8 boat-pic">
+     <a href="{{path('barco_venta')}}" class="b-link-stripe b-animate-go  thickbox">
+        <img class="port-pic" src= {{ asset('images/boat1.jpg') }} />
+        <div class="b-wrapper">
+           <h4 class="b-animate b-from-left  b-delay03 ">
+           <button>Ver barcos</button>
+           </h4>
+        </div>
+     </a>
+  </div>
+  <div class="clearfix"></div>
+</div>
+
+<div class="speed-boats2">
+  <div class="col-md-8 boat-pic">
+     <a href="{{path('amarre_venta')}}" class="b-link-stripe b-animate-go  thickbox">
+       <img class="port-pic" src= {{ asset('images/boat2.jpg') }} />
+      <div class="b-wrapper">
+         <h4 class="b-animate b-from-left  b-delay03 ">
+         <button>Ver amarres</button>
+         </h4>
+      </div>
+     </a>
+  </div>
+
+  <div class="col-md-4 boat-info">
+    <h3>AMARRES</h3>
+    <p>¿Que mejor sitio donde dejar tu barco? En nuestra tienda podrás encontrar una gran variedad de amarres a lo largo de todo el mundo.</p>
+    <a href="{{path('amarre_venta')}}">Ver amarres</a>
+    <div class="arrow nip2"></div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+</div>
+<!---->
+<div class="trainers">
+<h2>ACCESORIOS</h2>
+
+<div class="trainers-sec traine">
+  <div class="col-md-6 trainer">
+   <div class="trainers-pics">
+    <img src= {{ asset('images/man3.jpg') }} alt=""/>
+    </div>
+    <div class="trainer-info">
+     <h3>Pesca</h3>
+     <p>Aqui puedes encontrar los mejores accesorios para difrutar de un gran día de pesca ya sea solo o en familia</p>
+     <a href="{{path('accesorio_venta')}}">Ver accesorios</a>
+     <div class="strps3"></div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+
+  <div class="col-md-6 trainer">
+    <div class="trainers-pics">
+    <img src= {{ asset('images/man4.jpg') }} alt=""/>
+    </div>
+    <div class="trainer-info">
+       <h3>Nautica</h3>
+       <p>Encontrarás los mejores accesorios para complementar tu varco. Tenemos tanto accesorios para proporcionarte el mejor confort en tu barco</p>
+         <a href="{{path('accesorio_venta')}}">Ver accesorios</a>
+       <div class="strps4"></div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+
+</div>
+<!---->
+<div class="contact" id="contact">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3082.9524668188574!2d-0.41608758435084137!3d39.40258142461203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604e82a8672a35%3A0xed578f5f80fed685!2sFlorida+Universitaria!5e0!3m2!1ses!2ses!4v1508324168933" width="600" height="450" frameborder="0" style="border:0"></iframe>
+<div class="container">
+  <div class="contact-top">
+    <h3>BOATING</h3>
+    <p>Florida Universitaria</p>
+    <p>Catarroja</p>
+    <a href="mailto:joravlo@email.com">joravlo@email.com</a>
+    <p>666666666</p>
+  </div>
+  <div class="nip"></div>
+</div>
+</div>
+{% endblock %}

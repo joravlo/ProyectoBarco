@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+{% block title %}Amarres{% endblock %}
+{% block javascripts %} <script src= {{ asset('js/jquery.min.js') }}></script>{% endblock %}
+{% block body %}
+<!-- Products Page Starts Here -->
+<div class="product">
+	 <div class="container">
+		 <div class="col-md-3 sidebar_men">
+			  <h3>Tipo</h3>
+			  <ul class="product-categories color">
+				<li class="line3"><a href="#">SECO</a> <span class="count">(14)</span></li>
+				<li class="line3"><a href="#">BOYA</a> <span class="count">(2)</span></li>
+				<li class="line3"><a href="#">LOCAL</a> <span class="count">(2)</span></li>
+				<li class="line3"><a href="#">PAÑOL</a> <span class="count">(2)</span></li>
+				<li class="line3"><a href="#">AMARRE</a> <span class="count">(2)</span></li>
+			 </ul>
+			  <h3>Accion</h3>
+			  <ul class="product-categories color">
+				<li><a href="#">VENTA</a> <span class="count">(14)</span></li>
+				<li><a href="#">ALQUILER</a> <span class="count">(2)</span></li>
+			  </ul>
+			  <h3>Precio</h3>
+			  <ul class="product-categories">
+				<li class="line3"><a href="#">200€-300€</a> <span class="count">(14)</span></li>
+				<li class="line3"><a href="#">300€-400€</a> <span class="count">(2)</span></li>
+				<li><a href="#">400€-500€</a> <span class="count">(2)</span></li>
+				<li><a href="#">500€-600€</a> <span class="count">(8)</span></li>
+				<li><a href="#">600€-700€</a> <span class="count">(11)</span></li>
+			  </ul>
+		 </div>
+<div class="col-md-9 ctnt-bar">
+		<div class="content-bar">
+				<ul class="product-head">
+					<li class="active-page">AMARRES</li>
+					<div class="clear"> </div>
+				</ul>
+				<div class="products-row">
+					<a href="{{path('amarre_detalle')}}"><div class="product-grid boats-grid">
+						<div class="more-product-info"><span> </span></div>
+						<div class="product-img b-link-stripe b-animate-go  thickbox">
+							<img src="{{ asset('images/boats12.jpg') }}" alt="">
+							<div class="b-wrapper">
+							<h4 class="b-animate b-from-left  b-delay03 shoponline">
+							<a href="{{path('amarre_detalle')}}" class="btns">COMPRAR</a>
+							</h4>
+							</div>
+						</div>
+						<div class="product-info">
+							<div class="product-info-cust">
+								<a href="{{path('amarre_detalle')}}}">Detalle</a>
+							</div>
+							<div class="product-info-price">
+								<a href="{{path('amarre_detalle')}}">380€</a>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div></a>
+					<div class="clearfix"></div>
+				</div>
+
+	</div>
+</div>
+<div class="clearfix"></div>
+
+	 </div>
+</div>
+{% endblock %}
