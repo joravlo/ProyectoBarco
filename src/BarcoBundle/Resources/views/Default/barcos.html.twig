@@ -35,27 +35,30 @@
 					<li class="active-page">BARCOS</li>
 					<div class="clear"> </div>
 				</ul>
+
 				<div class="products-row">
-					<a href="{{path('barco_detalle')}}"><div class="product-grid boats-grid">
+					{% for barco in barcos %}
+					<a href="{{path('barco_detalle', {'idBarco': barco.id})}}"><div class="product-grid boats-grid">
 						<div class="more-product-info"><span> </span></div>
 						<div class="product-img b-link-stripe b-animate-go  thickbox">
 							<img src= {{ asset('images/boats12.jpg') }} alt="">
 							<div class="b-wrapper">
 							<h4 class="b-animate b-from-left  b-delay03 shoponline">
-							<a href="{{path('barco_detalle')}}" class="btns">COMPRAR</a>
+							<a href="{{path('barco_detalle', {'idBarco': barco.id})}}" class="btns">COMPRAR</a>
 							</h4>
 							</div>
 						</div>
 						<div class="product-info">
 							<div class="product-info-cust">
-								<a href="{{path('barco_detalle')}}">Detalle</a>
+								<a href="{{path('barco_detalle', {'idBarco': barco.id})}}">Detalle</a>
 							</div>
 							<div class="product-info-price">
-								<a href="{{path('barco_detalle')}}">380€</a>
+								<a href="{{path('barco_detalle', {'idBarco': barco.id})}}">{{barco.precio}}€</a>
 							</div>
 							<div class="clearfix"> </div>
 						</div>
 					</div></a>
+					{% endfor %}
 					<div class="clearfix"></div>
 				</div>
 

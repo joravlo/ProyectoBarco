@@ -12,15 +12,23 @@ class DefaultController extends Controller
     }
     public function barcosAction()
     {
-        return $this->render('BarcoBundle:Default:barcos.html.twig');
+      $repository = $this->getDoctrine()->getRepository('BarcoBundle:Barco');
+      $barcos = $repository->findAll();
+
+        return $this->render('BarcoBundle:Default:barcos.html.twig',array('barcos'=>$barcos));
     }
-    public function barcosDetalleAction()
+    public function barcosDetalleAction($idBarco)
     {
-        return $this->render('BarcoBundle:Default:barcosDetalle.html.twig');
+      $repository = $this->getDoctrine()->getRepository('BarcoBundle:Barco');
+      $barco = $repository->find($idBarco);
+      
+        return $this->render('BarcoBundle:Default:barcosDetalle.html.twig',array('barco'=>$barco));
     }
     public function amarresAction()
     {
-        return $this->render('BarcoBundle:Default:amarres.html.twig');
+      $repository = $this->getDoctrine()->getRepository('BarcoBundle:Amarre');
+      $amarres = $repository->findAll();
+        return $this->render('BarcoBundle:Default:amarres.html.twig',array('amarres'=>$amarres));
     }
     public function amarresDetalleAction()
     {

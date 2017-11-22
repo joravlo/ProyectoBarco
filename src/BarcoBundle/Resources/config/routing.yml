@@ -5,7 +5,7 @@ barco_venta:
     path:     /barcos
     defaults: { _controller: BarcoBundle:Default:barcos }
 barco_detalle:
-    path:     /barcos/detalle
+    path:     /barcos/detalle/{idBarco}
     defaults: { _controller: BarcoBundle:Default:barcosDetalle }
 amarre_venta:
     path:     /amarre

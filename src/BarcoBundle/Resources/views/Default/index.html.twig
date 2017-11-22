@@ -1,7 +1,8 @@
 {% extends 'base.html.twig' %}
 {% block title %}Inicio{% endblock %}
 {% block javascripts %} <script src= {{ asset('js/jquery.min.js') }}></script> {% endblock %}
-{% block body %}<script>
+{% block body %}
+<script>
  $(function () {
    $("#slider").responsiveSlides({
      auto: true,
@@ -21,7 +22,7 @@
            <div class="logo">
      <a href= "{{path('barco_homepage')}}"><img src= {{ asset('images/logo.png') }}></a>
      </div>
-     <h2>PONEMOS EL MAR A TU ALCAN{{ asset('css/style.css') }}CE</h2>
+     <h2>PONEMOS EL MAR A TU ALCANCE</h2>
          </div>
        </li>
        <li>
