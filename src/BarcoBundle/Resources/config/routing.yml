@@ -19,3 +19,6 @@ accesorio_venta:
 accesorio_detalle:
     path:     /accesorio/detalle
     defaults: { _controller: BarcoBundle:Default:accesoriosDetalle }
+barco_motor:
+    path:     /barcos/motor
+    defaults: { _controller: BarcoBundle:Default:barcosMotor }

@@ -21,7 +21,7 @@ class DefaultController extends Controller
     {
       $repository = $this->getDoctrine()->getRepository('BarcoBundle:Barco');
       $barco = $repository->find($idBarco);
-      
+
         return $this->render('BarcoBundle:Default:barcosDetalle.html.twig',array('barco'=>$barco));
     }
     public function amarresAction()
@@ -41,5 +41,14 @@ class DefaultController extends Controller
     public function accesoriosDetalleAction()
     {
         return $this->render('BarcoBundle:Default:accesoriosDetalle.html.twig');
+    }
+    public function barcosMotorAction()
+    {
+      $repository = $this->getDoctrine()->getRepository('BarcoBundle:Barco');
+      //Buscamos los barocs que tengan un tipo motor
+      $barcos = $repository->findByTipo("Motor");
+
+      //Pasamos el array de barcos a la pagina donde se mostrarán
+        return $this->render('BarcoBundle:Default:barcosMotor.html.twig',array('barcos'=>$barcos));
     }
 }
