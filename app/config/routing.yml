@@ -1,6 +1,18 @@
-barco:
+index:
     resource: "@BarcoBundle/Resources/config/routing.yml"
     prefix:   /
+
+barco:
+    resource: "@BarcoBundle/Resources/config/barcoRouting.yml"
+    prefix:   /barco
+
+amarre:
+    resource: "@BarcoBundle/Resources/config/amarreRouting.yml"
+    prefix:   /amarre
+
+accesorio:
+    resource: "@BarcoBundle/Resources/config/accesorioRouting.yml"
+    prefix:   /accesorio
 
 app:
     resource: '@AppBundle/Controller/'

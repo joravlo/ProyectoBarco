@@ -1,0 +1,6 @@
+amarre_venta:
+    path:     /
+    defaults: { _controller: BarcoBundle:Amarre:amarres }
+amarre_detalle:
+    path:    /detalle/{idAmarre}
+    defaults: { _controller: BarcoBundle:Amarre:amarresDetalle }

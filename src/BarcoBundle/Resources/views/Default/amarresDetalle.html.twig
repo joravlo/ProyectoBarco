@@ -64,19 +64,23 @@
 		</ul>
 	</div>
 	<div class="details-left-info">
-		<h3>Amarre pepe</h3>
+		<h3>Amarre {{amarre.tipo}}</h3>
 	    <div class="price_single">
 		  <span>Precio:</span>
-		  <span class="actual">328€</span>
+			{% if amarre.accion == "Alquiler" %}
+				<span class="actual">{{amarre.precio}}€/mes</span>
+			{% else %}
+				<span class="actual">{{amarre.precio}}€</span>
+			{% endif %}
 		</div>
 		<h2 class="quick">Detalles:</h2>
-		<p class="availability">Accion: <span class="color">Venta</span></p>
-		<p class="availability">Dimensiones: <span class="color">8x3.25m</span></p>
-		<p class="availability">Pais: <span class="color">España</span></p>
-		<p class="availability">Provincia: <span class="color">Valencia</span></p>
+		<p class="availability">Accion: <span class="color">{{amarre.accion}}</span></p>
+		<p class="availability">Dimensiones: <span class="color">{{amarre.dimensiones}}</span></p>
+		<p class="availability">Pais: <span class="color">{{amarre.pais}}</span></p>
+		<p class="availability">Provincia: <span class="color">{{amarre.provincia}}</span></p>
 		<ul class="size">
 			<h3>TIPO</h3>
-			<li><a href="#">Seco</a></li>
+			<li><a href="#">{{amarre.tipo}}</a></li>
 		</ul>
 
 		<div class="single-but">
@@ -87,22 +91,22 @@
 </div>
 <div class="products-row contact-prod">
 					<h3>Otros amarres</h3>
-					<a href="{{path('amarre_detalle')}}"><div class="product-grid boats-grid">
+					<a href="{{path('amarre_detalle', {'idAmarre': 1})}}"><div class="product-grid boats-grid">
 						<div class="more-product-info"><span> </span></div>
 						<div class="product-img b-link-stripe b-animate-go  thickbox">
 							<img src="{{ asset('images/boats12.jpg') }}" alt="">
 							<div class="b-wrapper">
 							<h4 class="b-animate b-from-left  b-delay03 shoponline">
-							<a href="{{path('amarre_detalle')}}" class="btns">COMPRAR</a>
+							<a href="{{path('amarre_detalle', {'idAmarre': 1})}}" class="btns">COMPRAR</a>
 							</h4>
 							</div>
 						</div>
 						<div class="product-info">
 							<div class="product-info-cust">
-								<a href="{{path('amarre_detalle')}}">Detalle</a>
+								<a href="{{path('amarre_detalle', {'idAmarre': 1})}}">Detalle</a>
 							</div>
 							<div class="product-info-price">
-								<a href="{{path('amarre_detalle')}}">380€</a>
+								<a href="{{path('amarre_detalle', {'idAmarre': 1})}}">380€</a>
 							</div>
 							<div class="clearfix"> </div>
 						</div>

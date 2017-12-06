@@ -91,6 +91,12 @@ class Barco
      */
     private $provincia;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Usuario", inversedBy="barcos")
+     * @ORM\JoinColumn(name="usuario_id", referencedColumnName="id")
+     */
+   private $usuario;
+
 
     /**
      * Get id
@@ -341,5 +347,28 @@ class Barco
     {
         return $this->provincia;
     }
-}
 
+    /**
+     * Set usuario
+     *
+     * @param \BarcoBundle\Entity\Usuario $usuario
+     *
+     * @return Barco
+     */
+    public function setUsuario(\BarcoBundle\Entity\Usuario $usuario = null)
+    {
+        $this->usuario = $usuario;
+
+        return $this;
+    }
+
+    /**
+     * Get usuario
+     *
+     * @return \BarcoBundle\Entity\Usuario
+     */
+    public function getUsuario()
+    {
+        return $this->usuario;
+    }
+}

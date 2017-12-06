@@ -36,25 +36,25 @@
 				</ul>
 				<div class="products-row">
 					{% for amarre in amarres %}
-					<a href="{{path('amarre_detalle')}}"><div class="product-grid boats-grid">
+					<a href="{{path('amarre_detalle', {'idAmarre': amarre.id})}}"><div class="product-grid boats-grid">
 						<div class="more-product-info"><span> </span></div>
 						<div class="product-img b-link-stripe b-animate-go  thickbox">
 							<img src="{{ asset('images/boats12.jpg') }}" alt="">
 							<div class="b-wrapper">
 							<h4 class="b-animate b-from-left  b-delay03 shoponline">
-							<a href="{{path('amarre_detalle')}}" class="btns">COMPRAR</a>
+							<a href="{{path('amarre_detalle', {'idAmarre': amarre.id})}}" class="btns">COMPRAR</a>
 							</h4>
 							</div>
 						</div>
 						<div class="product-info">
 							<div class="product-info-cust">
-								<a href="{{path('amarre_detalle')}}}">Detalle</a>
+								<a href="{{path('amarre_detalle', {'idAmarre': amarre.id})}}}">Detalle</a>
 							</div>
 							<div class="product-info-price">
 								{% if amarre.accion == "Alquiler" %}
-									<a href="{{path('amarre_detalle')}}">{{amarre.precio}}€/mes</a>
+									<a href="{{path('amarre_detalle', {'idAmarre': amarre.id})}}">{{amarre.precio}}€/mes</a>
 								{% else %}
-    							<a href="{{path('amarre_detalle')}}">{{amarre.precio}}€</a>
+    							<a href="{{path('amarre_detalle', {'idAmarre': amarre.id})}}">{{amarre.precio}}€</a>
 								{% endif %}
 							</div>
 							<div class="clearfix"> </div>

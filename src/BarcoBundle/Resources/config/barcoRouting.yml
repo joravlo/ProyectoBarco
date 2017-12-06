@@ -1,0 +1,9 @@
+barco_venta:
+    path:     /
+    defaults: { _controller: BarcoBundle:Barco:barcos }
+barco_detalle:
+    path:     /detalle/{idBarco}
+    defaults: { _controller: BarcoBundle:Barco:barcosDetalle }
+barco_motor:
+    path:     /motor
+    defaults: { _controller: BarcoBundle:Barco:barcosMotor }

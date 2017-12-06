@@ -1,0 +1,6 @@
+accesorio_venta:
+    path:     /
+    defaults: { _controller: BarcoBundle:Accesorio:accesorios }
+accesorio_detalle:
+    path:     /detalle/{idAccesorio}
+    defaults: { _controller: BarcoBundle:Accesorio:accesoriosDetalle }

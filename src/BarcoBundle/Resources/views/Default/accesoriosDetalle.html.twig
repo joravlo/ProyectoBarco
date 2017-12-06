@@ -60,18 +60,18 @@
 		</ul>
 	</div>
 	<div class="details-left-info">
-		<h3>Caña de pescar</h3>
+		<h3>Accesorio de {{accesorio.categoria}}</h3>
 	    <div class="price_single">
 		  <span>Precio:</span>
-		  <span class="actual">328€</span>
+		  <span class="actual">{{accesorio.precio}}</span>
 		</div>
 		<h2 class="quick">Detalles:</h2>
-		<p class="availability">Estado: <span class="color">Nuevo</span></p>
-		<p class="availability">Año: <span class="color">2015</span></p>
-		<p class="availability">Provincia: <span class="color">Valencia</span></p>
+		<p class="availability">Estado: <span class="color">{{accesorio.estado}}</span></p>
+		<p class="availability">Año: <span class="color">{{accesorio.year|date('Y-m-d')}}</span></p>
+		<p class="availability">Provincia: <span class="color">{{accesorio.provincia}}</span></p>
 		<ul class="size">
 			<h3>CATEGORIA</h3>
-			<li><a href="#">Caña</a></li>
+			<li><a href="#">{{accesorio.categoria}}</a></li>
 		</ul>
 
 		<div class="single-but">
@@ -82,22 +82,22 @@
 </div>
 <div class="products-row contact-prod">
 					<h3>Otros accesorios</h3>
-					<a href="{{path('accesorio_detalle')}}"><div class="product-grid boats-grid">
+					<a href="{{path('accesorio_detalle', {'idAccesorio': 1})}}"><div class="product-grid boats-grid">
 						<div class="more-product-info"><span> </span></div>
 						<div class="product-img b-link-stripe b-animate-go  thickbox">
 							<img src="images/boats12.jpg" alt="">
 							<div class="b-wrapper">
 							<h4 class="b-animate b-from-left  b-delay03 shoponline">
-							<a href="{{path('accesorio_detalle')}}" class="btns">COMPRAR</a>
+							<a href="{{path('accesorio_detalle', {'idAccesorio': 1})}}" class="btns">COMPRAR</a>
 							</h4>
 							</div>
 						</div>
 						<div class="product-info">
 							<div class="product-info-cust">
-								<a href="{{path('accesorio_detalle')}}">Detalle</a>
+								<a href="{{path('accesorio_detalle', {'idAccesorio': 1})}}">Detalle</a>
 							</div>
 							<div class="product-info-price">
-								<a href="{{path('accesorio_detalle')}}">380€</a>
+								<a href="{{path('accesorio_detalle', {'idAccesorio': 1})}}">380€</a>
 							</div>
 							<div class="clearfix"> </div>
 						</div>

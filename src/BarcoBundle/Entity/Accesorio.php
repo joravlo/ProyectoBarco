@@ -70,6 +70,11 @@ class Accesorio
      */
     private $precio;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Usuario", inversedBy="accesorios")
+     * @ORM\JoinColumn(name="usuario_id", referencedColumnName="id")
+     */
+    private $usuario;
 
     /**
      * Get id
@@ -248,5 +253,28 @@ class Accesorio
     {
         return $this->precio;
     }
-}
 
+    /**
+     * Set usuario
+     *
+     * @param \BarcoBundle\Entity\Usuario $usuario
+     *
+     * @return Accesorio
+     */
+    public function setUsuario(\BarcoBundle\Entity\Usuario $usuario = null)
+    {
+        $this->usuario = $usuario;
+
+        return $this;
+    }
+
+    /**
+     * Get usuario
+     *
+     * @return \BarcoBundle\Entity\Usuario
+     */
+    public function getUsuario()
+    {
+        return $this->usuario;
+    }
+}
