@@ -7,3 +7,9 @@ barco_detalle:
 barco_motor:
     path:     /motor
     defaults: { _controller: BarcoBundle:Barco:barcosMotor }
+barco_add:
+    path:     /addBarco
+    defaults: { _controller: BarcoBundle:Barco:addBarcos }
+barco_update:
+    path:     /updateBarco/{idBarco}
+    defaults: { _controller: BarcoBundle:Barco:actualizarBarco }

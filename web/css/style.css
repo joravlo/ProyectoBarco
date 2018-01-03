@@ -3,6 +3,7 @@ html, body{
     font-size: 100%;
   	background: #FFf;
 }
+
 body a{
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
@@ -1169,11 +1170,35 @@ border-radius: 0.5em;
 -o-border-radius: 0.5em;
 -ms-border-radius: 0.5em;
 }
+
+.contact2 .selectOption, .select select{
+width: 20%;
+padding: 1em;
+margin:1em 0.5em;
+font-family: 'Droid Sans', sans-serif;
+border: 1px solid #EEE;
+-webkit-appearance: none;
+outline: none;
+color: #777;
+transition: border-color 0.4s;
+-webkit-transition: border-color 0.4s;
+-moz-transition: border-color 0.4s;
+-o-transition: border-color 0.4s;
+-ms-transition: border-color 0.4s;
+font-size: 13px;
+font-weight: 300;
+border-radius: 0.5em;
+-webkit-border-radius: 0.5em;
+-moz-border-radius: 0.5em;
+-o-border-radius: 0.5em;
+-ms-border-radius: 0.5em;
+}
+
 .contact2 form textarea {
 min-height: 200px;
 resize: none;
 }
-.contact2 form input[type="submit"] {
+.contact2 .save {
 display: block;
 padding: 0.7em 2em;
 color: #FFB200;
@@ -1194,11 +1219,16 @@ transition: 0.5s all;
 -o-transition: 0.5s all;
 -ms-transition: 0.5s all;
 }
-.contact2 form input[type="submit"]:hover{
+.contact2 .save:hover{
 background:#FFB200;
 color:#fff;
 }
 .contact2 form input[type="text"]:hover,.contact2 textarea:hover {
+color: #FFB200;
+border-color: #FFB200;
+}
+
+.contact2 .selectOption:hover, .select select:hover {
 color: #FFB200;
 border-color: #FFB200;
 }
@@ -1639,7 +1669,7 @@ font-size: 0.85em;
 .motor-boats {
 padding-bottom: 1em;
 }
-.contact2 form input[type="submit"] {
+.contact2 .save {
 padding: 0.7em 3em;
 margin:1em 0;
 }
@@ -1974,7 +2004,7 @@ float: left;
 .contact2 form textarea {
 min-height: 156px;
 }
-.contact2 form input[type="submit"] {
+.contact2 .save {
 padding: 0.5em 2.5em;
 margin: 0.7em 0;
 font-size: 0.9em;
@@ -2208,6 +2238,12 @@ margin: 2.5em 0;
 padding: 9px;
 width:100%;
 }
+
+.contact2 .selectOption, .select select{
+padding: 9px;
+width:100%;
+}
+
 .contact2 form textarea {
 min-height: 125px;
 }

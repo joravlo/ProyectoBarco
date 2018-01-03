@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block title %}Actualizar Barco{% endblock %}
+{% block javascripts %} <script src= {{ asset('js/jquery.min.js') }}></script>
+<link rel="stylesheet" href= {{ asset('css/swipebox.css') }}>
+<script src= {{ asset('js/jquery.swipebox.min.js') }}></script>{% endblock %}
+{% block body %}
+<div class="contact-form">
+	 <div class="container">
+	 <h2>Añadir Barco</h2>
+	 <div class="col-md-6 contact2">
+		 {{form(form)}}
+	 </div>
+	 <div class="clearfix"></div>
+	 </div>
+</div>
+{% endblock %}

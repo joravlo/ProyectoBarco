@@ -40,7 +40,6 @@
 				<div class="products-row">
 					{% for barco in barcos %}
 					<a href="{{path('barco_detalle', {'idBarco': barco.id})}}"><div class="product-grid boats-grid">
-						<div class="more-product-info"><span> </span></div>
 						<div class="product-img b-link-stripe b-animate-go  thickbox">
 							<img src= {{ asset('images/boats12.jpg') }} alt="">
 							<div class="b-wrapper">
@@ -51,7 +50,7 @@
 						</div>
 						<div class="product-info">
 							<div class="product-info-cust">
-								<a href="{{path('barco_detalle', {'idBarco': barco.id})}}">Detalle</a>
+								<a href="{{path('barco_update', {'idBarco': barco.id})}}">Editar</a>
 							</div>
 							<div class="product-info-price">
 								<a href="{{path('barco_detalle', {'idBarco': barco.id})}}">{{barco.precio}}€</a>
