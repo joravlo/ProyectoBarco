@@ -76,6 +76,16 @@ class BarcoController extends Controller
         return $this->redirect($this->generateUrl('barco_detalle', array('idBarco' => $barco->getId())));
     }
 
-      return $this->render('BarcoBundle:BarcoViews:actualizarBarco.html.twig',array('form'=> $form->createView()));
+      return $this->render('BarcoBundle:BarcoViews:actualizarBarco.html.twig',array('idBarco' => $barco->getId() ,'form'=> $form->createView()));
+    }
+
+    public function eliminarBarcoAction($idBarco)
+    {
+      $em = $this->getDoctrine()->getManager();
+      $barco = $em->getRepository(Barco::Class)->find($idBarco);
+      $em->remove($barco);
+      $em->flush();
+
+      return $this->redirectToRoute('barco_venta');
     }
 }

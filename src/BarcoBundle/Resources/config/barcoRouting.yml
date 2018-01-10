@@ -13,3 +13,6 @@ barco_add:
 barco_update:
     path:     /updateBarco/{idBarco}
     defaults: { _controller: BarcoBundle:Barco:actualizarBarco }
+barco_eliminar:
+    path:     /deleteBarco/{idBarco}
+    defaults: { _controller: BarcoBundle:Barco:eliminarBarco }
