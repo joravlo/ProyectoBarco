@@ -1148,7 +1148,7 @@ color: #146EB4;
 font-weight: 600;
 margin: 0.5em 0;
 }
-.contact2 form input[type="text"],.contact2 form textarea {
+.contact2 form input[type="text"],.contact2 form textarea,.contact2 form input[type="password"], .contact2 form input[type="email"] {
 width: 92%;
 padding: 1em;
 margin:1em 0;
@@ -1223,7 +1223,7 @@ transition: 0.5s all;
 background:#FFB200;
 color:#fff;
 }
-.contact2 form input[type="text"]:hover,.contact2 textarea:hover {
+.contact2 form input[type="text"]:hover,.contact2 textarea:hover, .contact2 form input[type="password"]:hover, .contact2 form input[type="email"]:hover {
 color: #FFB200;
 border-color: #FFB200;
 }
@@ -2234,7 +2234,7 @@ font-size: 0.8em;
 .contact-form {
 margin: 2.5em 0;
 }
-.contact2 form input[type="text"], .contact2 form textarea {
+.contact2 form input[type="text"], .contact2 form textarea, .contact2 form input[type="password"], .contact2 form input[type="email"] {
 padding: 9px;
 width:100%;
 }

@@ -50,7 +50,11 @@
 						</div>
 						<div class="product-info">
 							<div class="product-info-cust">
-								<a href="{{path('barco_update', {'idBarco': barco.id})}}">Editar</a>
+								{% if is_granted('ROLE_ADMIN') %}
+                <a href="{{path('barco_update', {'idBarco': barco.id})}}">Editar</a>
+								{% else %}
+								<a href="{{path('barco_detalle', {'idBarco': barco.id})}}">Detalle</a>
+                {% endif %}
 							</div>
 							<div class="product-info-price">
 								<a href="{{path('barco_detalle', {'idBarco': barco.id})}}">{{barco.precio}}€</a>

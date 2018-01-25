@@ -1,6 +1,21 @@
 # To get started with security, check out the documentation:
 # https://symfony.com/doc/current/security.html
 security:
+    encoders:
+        BarcoBundle\Entity\Usuario: bcrypt
+
+
+    providers:
+        in_memory:
+            memory:
+                users:
+                    admin:
+                        password: 1234
+                        roles: 'ROLE_USER'
+        my_db_provider:
+          entity:
+            class: BarcoBundle:Usuario
+            property: username
 
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
@@ -13,6 +28,17 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
+        users:
+            pattern: ^/
+            anonymous: ~
+            provider: my_db_provider
+            form_login:
+                login_path: /login
+                check_path: /login
+            logout:
+                path:   /logout
+                target: /
+
         main:
             anonymous: ~
             # activate different ways to authenticate
@@ -22,3 +48,10 @@ security:
 
             # https://symfony.com/doc/current/security/form_login_setup.html
             #form_login: ~
+
+    access_control:
+                - {path: ^/login,roles: IS_AUTHENTICATED_ANONYMOUSLY}
+                - {path: ^/profile,roles: ROLE_USER}
+                - {path: ^/barco/addBarco,roles: ROLE_ADMIN}
+                - {path: ^/barco/updateBarco/,roles: ROLE_ADMIN}
+                - {path: ^/barco/deleteBarco/,roles: ROLE_ADMIN}

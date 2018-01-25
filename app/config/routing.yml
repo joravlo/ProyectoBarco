@@ -14,6 +14,9 @@ accesorio:
     resource: "@BarcoBundle/Resources/config/accesorioRouting.yml"
     prefix:   /accesorio
 
+logout:
+    path: /logout
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
