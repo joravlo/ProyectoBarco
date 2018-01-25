@@ -1,4 +1,4 @@
-barcos
+Tienda de barcos
 ======
 
-A Symfony project created on October 19, 2017, 9:51 pm.
+Proyecto de Symfony en el cual se podrá gestionar una tienda de Barcos.
