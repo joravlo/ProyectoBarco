@@ -3,6 +3,7 @@
 namespace BarcoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Barco
@@ -370,5 +371,34 @@ class Barco
     public function getUsuario()
     {
         return $this->usuario;
+    }
+
+    public function setParameters(Request $request)
+    {
+        $this->tipo = $request->request->get('tipo');
+        $this->estado = $request->request->get("estado");
+        $this->marca = $request->request->get("marca");
+        $this->modelo = $request->request->get("modelo");
+        $this->precio = $request->request->get("precio");
+        $this->eslora = $request->request->get("eslora");
+        $this->year = new \DateTime($request->request->get("year"));
+        $this->foto = $request->request->get("foto");
+        $this->pais = $request->request->get("pais");
+        $this->provincia = $request->request->get("provincia");
+        $this->usuario_id = 1;
+
+        return $this;
+
+    }
+
+    public function checkParameters(){
+      if ($this->tipo != null && $this->estado != null && $this->marca != null &&
+            $this->marca != null && $this->modelo != null && $this->precio != null &&
+              $this->eslora != null && $this->year != null && $this->foto != null && $this->pais != null &&
+                $this->provincia != null) {
+        return true;
+      }
+
+      return false;
     }
 }

@@ -26,6 +26,7 @@
                <li class="{% if (routeSelected == 'amarre_venta' or routeSelected == 'amarre_detalle') %}active{% endif %}"><a href="{{path('amarre_venta')}}">Amarres</a></li>
                <li class="{% if (routeSelected == 'accesorio_venta' or routeSelected == 'accesorio_detalle') %}active{% endif %}"><a href="{{path('accesorio_venta')}}">Accesorios</a></li>
                <li class="{% if (routeSelected == 'barco_register') %}active{% endif %}"><a href="{{path('barco_register')}}">Registrase</a></li>
+               <li class="{% if (routeSelected == 'show_users') %}active{% endif %}"><a href="{{path('show_users')}}">Usuarios</a></li>
                <!-- Si entra como rol administrador mostraremos la siguiente ruta -->
                {% if is_granted('ROLE_ADMIN') %}
                <li class="{% if (routeSelected == 'barco_add') %}active{% endif %}"><a href="{{path('barco_add')}}">Añadir Barco</a></li>

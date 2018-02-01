@@ -1,0 +1,16 @@
+api_get_barco:
+    path:     /getBarco/{idBarco}
+    defaults: { _controller: BarcoBundle:Response:getBarco }
+    methods:  [GET]
+api_post_barco:
+    path:     /postBarco
+    defaults: { _controller: BarcoBundle:Response:postBarco }
+    methods:  [POST]
+api_put_barco:
+    path:     /putBarco/{idBarco}
+    defaults: { _controller: BarcoBundle:Response:putBarco }
+    methods:  [PUT]
+api_delete_barco:
+    path:     /deleteBarco/{idBarco}
+    defaults: { _controller: BarcoBundle:Response:deleteBarco }
+    methods:  [DELETE]

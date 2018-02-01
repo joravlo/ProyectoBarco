@@ -14,6 +14,14 @@ accesorio:
     resource: "@BarcoBundle/Resources/config/accesorioRouting.yml"
     prefix:   /accesorio
 
+users:
+    resource: "@BarcoBundle/Resources/config/usuarioRouting.yml"
+    prefix:   /users
+
+api:
+    resource: "@BarcoBundle/Resources/config/apiRouting.yml"
+    prefix:   /api
+
 logout:
     path: /logout
 

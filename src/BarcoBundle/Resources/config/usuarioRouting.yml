@@ -1,0 +1,9 @@
+show_users:
+    path:     /
+    defaults: { _controller: BarcoBundle:Usuario:showUsers }
+update_users:
+    path:     /{idUser}
+    defaults: { _controller: BarcoBundle:Usuario:userUpdate }
+delete_user:
+    path:     /deleteUser/{idUser}
+    defaults: { _controller: BarcoBundle:Usuario:userDelete }

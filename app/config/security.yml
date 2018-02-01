@@ -55,3 +55,4 @@ security:
                 - {path: ^/barco/addBarco,roles: ROLE_ADMIN}
                 - {path: ^/barco/updateBarco/,roles: ROLE_ADMIN}
                 - {path: ^/barco/deleteBarco/,roles: ROLE_ADMIN}
+                - {path: ^/users,roles: ROLE_ADMIN}

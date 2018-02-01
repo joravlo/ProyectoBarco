@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+{% block title %}Usuarios{% endblock %}
+{% block javascripts %} <script src= {{ asset('js/jquery.min.js') }}></script>
+<link rel="stylesheet" href= {{ asset('css/swipebox.css') }}>
+<script src= {{ asset('js/jquery.swipebox.min.js') }}></script>{% endblock %}
+{% block body %}
+<div class="product">
+	 <div class="container">
+
+<div class="col-md-9 ctnt-bar">
+		<div class="content-bar">
+				<ul class="product-head">
+					<li class="active-page">USUARIOS</li>
+					<div class="clear"> </div>
+				</ul>
+
+				<div class="products-row">
+					{% for user in usuarios %}
+					<a href=""><div class="product-grid boats-grid">
+						<div class="product-img b-link-stripe b-animate-go  thickbox">
+							<img src= {{ asset('images/man1.jpg') }} alt="">
+              <div class="b-wrapper">
+              <h4 class="b-animate b-from-left  b-delay03 shoponline">
+              <a href="" class="btns">{{user.nombre}}</a>
+              </h4>
+              </div>
+						</div>
+						<div class="product-info">
+							<div class="product-info-cust">
+								<a href="{{path('update_users', {'idUser': user.id})}}">Editar</a>
+							</div>
+							<div class="product-info-price">
+								<a href="{{path('delete_user', {'idUser': user.id})}}">Borrar</a>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div></a>
+					{% endfor %}
+					<div class="clearfix"></div>
+				</div>
+
+	</div>
+</div>
+<div class="clearfix"></div>
+
+	 </div>
+</div>
+{% endblock %}

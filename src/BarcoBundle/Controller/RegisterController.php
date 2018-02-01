@@ -16,6 +16,7 @@ class RegisterController extends Controller
       // 1) build the form
       $user = new Usuario();
       $form = $this->createForm(UsuarioType::class, $user);
+      
 
       // 2) handle the submit (will only happen on POST)
       $form->handleRequest($request);
