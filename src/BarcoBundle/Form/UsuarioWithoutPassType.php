@@ -11,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 
 class UsuarioWithoutPassType extends AbstractType
 {
@@ -19,9 +20,11 @@ class UsuarioWithoutPassType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+      //El collectionType recoge de la base de datos el array y lo convierte
         $builder->add('username', TextType::class)
         ->add('nombre', TextType::class)
         ->add('apellidos', TextType::class)
+        ->add('roles', CollectionType::class)
         ->add('correo', EmailType::class)
         ->add('acutalizar', SubmitType::class, array('attr' => array('class' => 'save')));
     }
